@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traditional 2 Menu</title>
+  <link rel="stylesheet" href="tradisional2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="buffet.html" class="back-btn">
+      <img src="image/back.svg" alt="Back" class="back-icon" />
+    </a>
+  </div>
+  <div class="navbar-right">
+    <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo" />
+  </div>
+</nav>
+
+<!-- Gallery Filter -->
+<section class="gallery">
+  <div class="gallery-header">
+    <h2 class="gallery-title"><span>Our Menu</span> – Buffet – Traditional 2</h2>
+    <select class="gallery-filter" id="menuSelect">
+      <option value="venusclan.html">Venus Clan</option>
+      <option value="jupiterclan.html">Jupiter Clan</option>
+      <option value="saturnusclan.html">Saturnus Clan</option>
+      <option value="tradisional1.html">Traditional 1</option>
+      <option value="tradisional2.html" selected>Traditional 2</option>
+    </select>
+  </div>
+</section>
+
+<div class="container">
+  <div class="menu-left">
+    <h2 class="title-script">Our Menu - Buffet - Traditional 2</h2>
+    <h3 class="title-script sub">Traditional 2</h3>
+    <p class="price">50.000,- per pax (min order: 150 pax)</p>
+
+    <div class="menu-section">
+      <h4>1. Menu</h4>
+      <ul>
+        <li>Nasi putih / Nasi merah</li>
+        <li>Pecak jantung / Sayur asem / Lodeh terong</li>
+        <li>Empal daging / Gurame goreng</li>
+        <li>Kikil lombok ijo / lembutan</li>
+        <li>Ikan asin goreng / Tempe tahu goreng / Bacem</li>
+        <li>Oseng pakus / Oseng tempe / Kluban / Daun pepaya teri lombok ijo</li>
+        <li>Sambel lalab</li>
+        <li>Peyek kacang / Ebi</li>
+        <li>Air mineral</li>
+        <li>Buah potong / Fruites juice</li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h4>2. Additional</h4>
+      <p>Aneka sambal (5K per pax.)</p>
+      <ul>
+        <li>Sambel matah</li>
+        <li>Sambel ijo</li>
+        <li>Sambel bawang</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ketentuan -->
+  <div class="rules-frame">
+    <h3 class="title-script">Ketentuan Pemesanan</h3>
+
+    <div class="rule-section">
+      <h4>1. Sistem Pembayaran</h4>
+      <ul>
+        <li>Booking DP Rp.2.000.000,- untuk memastikan tanggal</li>
+        <li>Harga mengikat 1 periode (12 bulan)</li>
+        <li>Pelunasan maksimal H-7 acara</li>
+      </ul>
+    </div>
+
+    <div class="rule-section">
+      <h4>2. Sistem Order/Pemesanan</h4>
+      <ul>
+        <li>Harga bisa berubah sewaktu-waktu</li>
+        <li>Perubahan menu maksimal H-7</li>
+        <li>Tambahan biaya untuk lokasi jauh, waktu lebih dari 4 jam, atau permintaan khusus</li>
+      </ul>
+    </div>
+
+    <div class="rule-section">
+      <h4>3. Pembatalan dan Sanksi</h4>
+      <ul>
+        <li>Pembatalan 3 minggu sebelum acara: DP dikembalikan 50%</li>
+        <li>Pembatalan 1 minggu sebelum acara: DP hangus</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <img src="image/logo.png" alt="Logo" class="footer-logo" />
+  <p>© 2025, Che-Che Catering. All rights reserved</p>
+</footer>
+
+<script>
+  document.getElementById('menuSelect').addEventListener('change', function () {
+    window.location.href = this.value;
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('.menu-box');
+    boxes.forEach((box, i) => {
+      box.style.animationDelay = `${i * 0.2}s`;
+      box.style.opacity = '1';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paket Ngupati - Cheche Catering</title>
+  <link rel="stylesheet" href="paketngupati.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="box.html" class="back-btn">
+        <img src="image/back.svg" alt="Back" class="back-icon">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <!-- Gallery Filter -->
+  <section class="gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-title"><span>Our Menu</span> – Box – Paket Ngupati</h2>
+      <select class="gallery-filter" id="menuSelect">
+        <option value="snackbox.html">Snack Box</option>
+        <option value="paketnasibox.html">Paket Nasi Box</option>
+        <option value="paketngupati.html" selected>Paket Ngupati</option>
+        <option value="paketmitoni.html">Paket Mitoni</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content">
+    <div class="menu-box">
+      <div class="menu-item animate-in">
+        <img src="image/ngupati A.jpg" alt="Ngupati A">
+        <div class="menu-detail">
+          <h3><span>Paket Ngupati A</span></h3>
+          <p>Menu snack box : 35.000</p>
+          <ul>
+            <li>Kupat 4 macam</li>
+            <li>Tahu tempe terik</li>
+            <li>Ikan lembutan</li>
+            <li>Kentang balado</li>
+            <li>Mie goreng</li>
+            <li>Telor lo</li>
+            <li>Kerupuk</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item animate-in">
+        <img src="image/ngupati Bb.jpg" alt="Ngupati B">
+        <div class="menu-detail">
+          <h3><span>Paket Ngupati B</span></h3>
+          <p>Menu snack box : 80.000</p>
+          <ul>
+            <li>Kupat 4 macam</li>
+            <li>Tahu tempe telor terik</li>
+            <li>Ikan mujaer</li>
+            <li>Oseng soun</li>
+            <li>Buah jeruk</li>
+            <li>Kerupuk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-image">
+      <img src="image/baground2.png" alt="Enjoy The Food" />
+      <div class="image-overlay-text">Enjoy The Food</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="image/logo.png" alt="Logo" class="footer-logo">
+    <p>© 2025, Che-Che Catering. All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuSelect').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paket Ngupati - Cheche Catering</title>
+  <link rel="stylesheet" href="pkttumpengmini.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="tumpeng.html" class="back-btn">
+        <img src="image/back.svg" alt="Back" class="back-icon">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <!-- Gallery Filter -->
+  <section class="gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-title"><span>Our Menu</span> – Paket Tumpeng - Mini</h2>
+      <select class="gallery-filter" id="menuSelect">
+        <option value="pakettumpeng.html">Paket tumpeng</option>
+        <option value="pkttumpengmini.html" selected>Paket tumpeng mini</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content">
+    <div class="menu-box">
+      <div class="menu-item animate-in">
+        <img src="image/99d8a8d4-a887-47df-b2f5-55fd1c6b7ed0.jpg" alt="Ngupati A">
+        <div class="menu-detail">
+          <h3><span>Paket Tumini Nasi Kuning</span></h3>
+          <p>Harga paket : 40.000</p>
+          <ul>
+            <li>Nasi kuning</li>
+            <li>Ayam goreng</li>
+            <li>Mie goreng</li>
+            <li>Kentang balado</li>
+            <li>Kering kentang</li>
+            <li>Telor balado</li>
+            <li>Perkedel</li>
+            <li>Sambal</li>
+            <li>Lalaban</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item animate-in">
+        <img src="image/CALL +62 815-7222-2428 tumpeng mini nasi putih Serpong, Serpong Utara.jpg" alt="Ngupati B">
+        <div class="menu-detail">
+          <h3><span>Paket Tumini Nasi Putih</span></h3>
+          <p>Harga paket : 40.000</p>
+          <ul>
+            <li>Nasi putih</li>
+            <li>Ayam goreng</li>
+            <li>Mie goreng</li>
+            <li>Kentang balado</li>
+            <li>Kering kentang</li>
+            <li>Telor balado</li>
+            <li>Perkedel</li>
+            <li>Sambal</li>
+            <li>Lalaban</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-image">
+      <img src="image/baground2.png" alt="Enjoy The Food" />
+      <div class="image-overlay-text">Enjoy The Food</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="image/logo.png" alt="Logo" class="footer-logo">
+    <p>© 2025, Che-Che Catering. All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuSelect').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+  </script>
+</body>
+</html>

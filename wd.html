@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Food and Beverage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fnb.css">
+  
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="navbar-left">
+    <a href="home.html" class="back-btn">
+      <img src="image/back.svg" alt="Back" class="back-icon">
+    </a>
+  </div>
+  <div class="navbar-right">
+    <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+  </div>
+</nav>
+
+  <!-- Galeri -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <h2><span>Gallery</span> - Wedding Decoration</h2>
+    <select class="gallery-filter" id="gallerySelect">
+      <option value="fnb.html">Food and Beverage</option>
+      <option value="wd.html">Wedding Decoration</option>
+      <option value="stall.html">Stall</option>
+    </select>
+  </div>
+
+  <div class="gallery-grid">
+
+      <!-- 12 Gambar -->
+      <div class="gallery-item"><img src="image/TC_08904.jpg" alt="Menu 1" /></div>
+      <div class="gallery-item"><img src="image/TC_08906.jpg" alt="Menu 2" /></div>
+      <div class="gallery-item"><img src="image/TC_08909.jpg" alt="Menu 3" /></div>
+      <div class="gallery-item"><img src="image/TC_08997.jpg" alt="Menu 4" /></div>
+      <div class="gallery-item"><img src="image/TC_09007.jpg" alt="Menu 5" /></div>
+      <div class="gallery-item"><img src="image/TC_09014.jpg" alt="Menu 6" /></div>
+      <div class="gallery-item"><img src="image/TC_08915 (1).jpg" alt="Menu 7" /></div>
+      <div class="gallery-item"><img src="image/TC_08965.jpg" alt="Menu 8" /></div>
+      <div class="gallery-item"><img src="image/TC_09003.jpg" alt="Menu 9" /></div>
+      <div class="gallery-item"><img src="image/TC_09005.jpg" alt="Menu 10" /></div>
+      <div class="gallery-item"><img src="image/TC_08998.jpg" alt="Menu 11" /></div>
+      <div class="gallery-item"><img src="image/TC_08983.jpg" alt="Menu 12" /></div>
+    </div>
+
+    <footer class="gallery-footer">
+      &copy; 2025, Che-Che Catering. All rights reserved
+    </footer>
+  </section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+  <img src="" alt="Preview" class="lightbox-img" id="lightbox-img">
+  <div class="lightbox-nav">
+    <span class="prev" onclick="prevImage()">&#10094;</span>
+    <span class="next" onclick="nextImage()">&#10095;</span>
+  </div>
+</div>
+
+<script src="gallery.js"></script>
+
+</body>
+
+<script>
+  document.getElementById("gallerySelect").addEventListener("change", function () {
+    const page = this.value;
+    if (page) {
+      window.location.href = page;
+    }
+  });
+</script>
+
+</html>

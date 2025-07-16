@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paket Tumpeng - Cheche Catering</title>
+  <link rel="stylesheet" href="pakettumpeng.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="box.html" class="back-btn">
+        <img src="image/back.svg" alt="Back" class="back-icon">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <!-- Gallery Filter -->
+  <section class="gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-title"><span>Our Menu</span> – Paket Tumpeng</h2>
+      <select class="gallery-filter" id="menuSelect">
+        <option value="pakettumpeng.html" selected>Paket tumpeng</option>
+        <option value="pkttumpengmini.html">Paket tumpeng mini</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content">
+    <!-- Frame scrollable -->
+    <div class="menu-wrapper">
+      <div class="menu-item">
+        <img src="image/tumpeng 8 porsi.jpg" alt="Tumpeng 8 Porsi">
+        <div class="menu-detail">
+          <h3><span>Paket Tumpeng 8 Porsi</span></h3>
+          <p>Harga paket : 360.000</p>
+          <ul>
+            <li>Nasi kuning</li>
+            <li>Ayam goreng</li>
+            <li>Kentang balado</li>
+            <li>Mie goreng</li>
+            <li>Telur rawis’</li>
+            <li>Kering tempe</li>
+            <li>Sambal</li>
+            <li>Garnis</li>
+            <li>Kartu ucapan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/tumpeng 10 porsi 1.jpg" alt="Tumpeng 10 Porsi">
+        <div class="menu-detail">
+          <h3><span>Paket Tumpeng 10 Porsi</span></h3>
+          <p>Harga paket : 450.000</p>
+          <ul>
+            <li>Nasi kuning</li>
+            <li>Ayam goreng</li>
+            <li>Kentang balado</li>
+            <li>Mie goreng</li>
+            <li>Telur rawis</li>
+            <li>Kering tempe</li>
+            <li>Sambal</li>
+            <li>Garnis</li>
+            <li>Kartu ucapan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/real 15 porsi.jpg" alt="Tumpeng 15 Porsi">
+        <div class="menu-detail">
+          <h3><span>Paket Tumpeng 15 Porsi</span></h3>
+          <p>Harga paket : 675.000</p>
+          <ul>
+            <li>Nasi kuning</li>
+            <li>Ayam goreng</li>
+            <li>Kentang balado</li>
+            <li>Mie goreng</li>
+            <li>Telur rawis</li>
+            <li>Kering tempe</li>
+            <li>Sambal</li>
+            <li>Lalaban</li>
+            <li>Garnis</li>
+            <li>Kartu ucapan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/real 20 porsi.jpg" alt="Tumpeng 20 Porsi">
+        <div class="menu-detail">
+          <h3><span>Paket Tumpeng 20 Porsi</span></h3>
+          <p>Harga paket : 900.000</p>
+          <ul>
+            <li>Nasi kuning</li>
+            <li>Ayam bakar</li>
+            <li>Kentang balado</li>
+            <li>Mie goreng</li>
+            <li>Telur rawis</li>
+            <li>Kering tempe</li>
+            <li>Sambal</li>
+            <li>Lalaban</li>
+            <li>Garnis</li>
+            <li>Kartu ucapan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image kanan -->
+    <div class="menu-image animate-in">
+      <img src="image/baground2.png" alt="Enjoy The Food">
+      <div class="image-overlay-text">Enjoy The Food</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="image/logo.png" alt="Logo" class="footer-logo">
+    <p>© 2025, Che-Che Catering. All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuSelect').addEventListener('change', function () {
+      window.location.href = this.value;
+    });
+
+  window.addEventListener('load', () => {
+    const left = document.querySelector('.menu-wrapper');
+    const right = document.querySelector('.menu-image');
+    right.style.height = `${left.offsetHeight}px`;
+  });
+
+  window.addEventListener('resize', () => {
+    const left = document.querySelector('.menu-wrapper');
+    const right = document.querySelector('.menu-image');
+    right.style.height = `${left.offsetHeight}px`;
+  });
+  </script>
+</body>
+</html>

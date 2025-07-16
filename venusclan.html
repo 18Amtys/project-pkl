@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venus Clan Menu</title>
+  <link rel="stylesheet" href="venusclan.css">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="buffet.html" class="back-btn">
+        <img src="image/back.svg" alt="Back" class="back-icon">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <!-- Gallery Filter -->
+  <section class="gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-title"><span>Our Menu</span> – Buffet – Venus Clan</h2>
+      <select class="gallery-filter" id="menuSelect">
+        <option value="venusclan.html" selected>Venus Clan</option>
+        <option value="jupiterclan.html">Jupiter Clan</option>
+        <option value="saturnusclan.html">Saturnus Clan</option>
+        <option value="tradisional1.html">Tradisional 1</option>
+        <option value="tradisional2.html">Tradisional 2</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="menu-left">
+      <h3 class="title-script sub">Venus Clan</h3>
+      <p class="price">45.000,- per pax (min order: 150 pax)</p>
+
+      <div class="menu-section">
+        <h4>1. Beverage</h4>
+        <ul><li>Air Putih</li></ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>2. Nasi Putih</h4>
+      </div>
+
+      <div class="menu-section">
+        <h4>3. Sup</h4>
+        <ul>
+          <li>Sup jagung bakso</li>
+          <li>Sup jagung ayam</li>
+          <li>Sup jolade ayam</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>4. Lauk 1</h4>
+        <ul>
+          <li>Ayam mentega</li>
+          <li>Ayam saus padang</li>
+          <li>Ayam bakar kecap</li>
+          <li>Ayam bumbu bali</li>
+          <li>Ayam bumbu hijau</li>
+          <li>Ayam panggang bumbu rujak</li>
+          <li>Ayam asam pedas</li>
+          <li>Ayam teriyaki</li>
+          <li>Ayam saos tiram</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>5. Lauk 2</h4>
+        <ul>
+          <li>Kikil lombok ijo</li>
+          <li>Asem asem sandung lamur</li>
+          <li>Srundeng paru</li>
+          <li>Paru sambul ijo</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>6. Sayur</h4>
+        <ul>
+          <li>Ca Pokcoy Ayam</li>
+          <li>Ca Buncis Siram ayam</li>
+          <li>Ca Kombinasi Tetelan</li>
+          <li>Tumis Sawi Kacang Merah Ayam</li>
+          <li>Oseng Sosis Jamur Lombok ijo</li>
+          <li>Bakmi goreng ayam</li>
+          <li>Soun goreng ayam</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>7. Crackers</h4>
+        <ul>
+          <li>Kerupuk udang</li>
+          <li>Kerupuk bawang</li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h4>8. Dessert</h4>
+        <ul>
+          <li>Es Klamud Lemon</li>
+          <li>Es Serut Melon</li>
+          <li>Es Pudding Jelly</li>
+          <li>Es Tea Jelly Cincao</li>
+          <li>Fruits Slice</li>
+          <li>Fruits Punch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rules-frame">
+      <h3 class="title-script">Ketentuan Pemesanan</h3>
+
+      <div class="rule-section">
+        <h4>1. Sistem Pembayaran</h4>
+        <ul>
+          <li>Booking DP Rp.2.000.000,- untuk memastikan tanggal</li>
+          <li>Harga mengikat 1 periode (12 bulan)</li>
+          <li>Pelunasan maksimal H-7 acara</li>
+        </ul>
+      </div>
+
+      <div class="rule-section">
+        <h4>2. Sistem Order/Pemesanan</h4>
+        <ul>
+          <li>Harga bisa berubah sewaktu-waktu</li>
+          <li>Perubahan menu maksimal H-7</li>
+          <li>Tambahan biaya untuk lokasi jauh, waktu lebih dari 4 jam, atau permintaan khusus</li>
+        </ul>
+      </div>
+
+      <div class="rule-section">
+        <h4>3. Pembatalan dan Sanksi</h4>
+        <ul>
+          <li>Pembatalan 3 minggu sebelum acara: DP dikembalikan 50%</li>
+          <li>Pembatalan 1 minggu sebelum acara: DP hangus</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+   <!-- Footer -->
+  <footer class="footer">
+    <img src="image/logo.png" alt="Logo" class="footer-logo">
+    <p>© 2025, Che-Che Catering. All rights reserved</p>
+  </footer>
+
+  <script>
+  document.getElementById('menuSelect').addEventListener('change', function () {
+    window.location.href = this.value;
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('.menu-box');
+    boxes.forEach((box, i) => {
+      box.style.animationDelay = `${i * 0.2}s`;
+      box.style.opacity = '1';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-right .navbar-logo {
+  height: 55px; 
+  object-fit: contain;
+}
+
+/* Tombol back */
+.navbar-left .back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Ikon panah */
+.back-icon {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+/* Hover efek menarik */
+.navbar-left .back-btn:hover {
+  background-color: #f79f95;
+  transform: scale(1.15) rotate(-10deg);
+  box-shadow: 0 0 14px rgba(243, 63, 43, 0.5);
+}
+
+.navbar-left .back-btn:hover .back-icon {
+  filter: brightness(1.2) contrast(1.1);
+  transform: scale(1.05);
+}
+
+/* Klik aktif */
+.navbar-left .back-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(231, 76, 60, 0.3);
+}
+
+/* Galeri */
+.gallery {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.gallery-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.gallery-header h2 span {
+  color: #e74c3c;
+  font-family: 'Pacifico', cursive;
+}
+
+.gallery-filter {
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hover gambar */
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-item::after {
+  content: "🔍 Klik untuk perbesar";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(231, 76, 60, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+/* Fancy dropdown styling */
+.gallery-filter {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #e74c3c;
+  padding: 10px 16px;
+  border-radius: 50px; /* bulat */
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e74c3c;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 140,0 70,140' fill='%23e74c3c'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  min-width: 220px;
+  margin-top: 10px;
+}
+
+/* Hover: seperti tombol back */
+.gallery-filter:hover,
+.gallery-filter:focus {
+  background-color: #fceae8;
+  border-color: #c0392b;
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.4);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Lightbox slide effect */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.4s ease;
+}
+
+.lightbox-img.show-slide-left {
+  opacity: 1;
+  transform: translateX(-30px);
+}
+
+.lightbox-img.show-slide-right {
+  opacity: 1;
+  transform: translateX(30px);
+}
+
+.lightbox-img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .gallery-filter {
+    width: 100%;
+  }
+}

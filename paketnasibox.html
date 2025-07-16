@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paket Nasi Box</title>
+  <link rel="stylesheet" href="paketnasibox.css">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="box.html" class="back-btn">
+        <img src="image/back.svg" alt="Back" class="back-icon">
+      </a>
+    </div>
+    <div class="navbar-right">
+      <img src="image/logo.png" alt="Cheche Catering Logo" class="navbar-logo">
+    </div>
+  </nav>
+
+  <!-- Gallery Filter -->
+  <section class="gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-title"><span>Our Menu</span> – Box – Nasi box</h2>
+      <select class="gallery-filter" id="menuSelect">
+        <option value="snackbox.html">Snack Box</option>
+        <option value="paketnasibox.html" selected>Paket Nasi Box</option>
+        <option value="paketngupati.html">Paket Ngupati</option>
+        <option value="paketmitoni.html">Paket Mitoni</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="container">
+    <div class="menu-columns">
+      <!-- Paket A & B -->
+      <div class="menu-left">
+        <!-- Paket A -->
+        <div class="menu-box">
+          <img src="image/1.jpg" alt="Paket A" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-header">Paket A</h3>
+            <p class="price">Menu Nasi Box : 20.000</p>
+            <ul>
+              <li>Nasi putih</li>
+              <li>Oseng tempe / Oseng Soun</li>
+              <li>Ayam goreng / Bakar</li>
+              <li>Tahu / Tempe goreng</li>
+              <li>Sambel</li>
+              <li>Lalaban</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Paket B -->
+        <div class="menu-box">
+          <div class="menu-multiple-images">
+            <img src="image/paket B1.jpg" class="menu-image-small" alt="Paket B 1">
+            <img src="image/Paket B2.jpg" class="menu-image-small" alt="Paket B 2">
+            <img src="image/Paket B3.jpg" class="menu-image-small" alt="Paket B 3">
+          </div>
+          <div class="menu-content">
+            <h3 class="menu-header">Paket B</h3>
+            <p class="price">Menu Nasi Box : 23.000</p>
+            <ul>
+              <li><strong>Nasi putih</strong></li>
+              <li><strong>Pilih Salah Satu:</strong></li>
+              <ul class="indent">
+                <li>Oseng tempe</li>
+                <li>Oseng tahu toge</li>
+                <li>Oseng daun pepaya / daun singkong</li>
+                <li>Oseng labu siam</li>
+                <li>Oseng pepaya daun so ca buncis</li>
+                <li>Ca putren wortel</li>
+                <li>Ca keciwis</li>
+              </ul>
+              <li><strong>Pilih Salah Satu:</strong></li>
+              <ul class="indent">
+                <li>Soun lombok ijo</li>
+                <li>Bihun jamur</li>
+                <li>Mie goreng</li>
+              </ul>
+              <li><strong>Pilih Salah Satu:</strong></li>
+              <ul class="indent">
+                <li>Ayam goreng / bakar</li>
+                <li>Ayam lombok ijo</li>
+                <li>Ayam rendang</li>
+                <li>Ayam bb rujak</li>
+                <li>Ayam bb bali</li>
+                <li>Ayam woku kemangi</li>
+              </ul>
+              <li>Kerupuk</li>
+              <li>Sambel</li>
+              <li>Lalaban</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Tambahan -->
+      <div class="menu-right">
+        <div class="menu-additional">
+          <h3 class="menu-header">Menu Tambahan</h3>
+          <p><strong>AMDK:</strong></p>
+          <ul>
+            <li>Air Mineral - 1000</li>
+          </ul>
+          <p><strong>Buah-buahan:</strong></p>
+          <ul>
+            <li>Pisang - 2000</li>
+            <li>Semangka - 2000</li>
+            <li>Jeruk - 4000</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+  document.getElementById('menuSelect').addEventListener('change', function () {
+    window.location.href = this.value;
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('.menu-box');
+    boxes.forEach((box, i) => {
+      box.style.animationDelay = `${i * 0.2}s`;
+      box.style.opacity = '1';
+    });
+  });
+</script>
+</body>
+</html>

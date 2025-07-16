@@ -1,0 +1,324 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Aeonik", sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo-navbar {
+  height: 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-family: "Satisfy", cursive;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navbar a.active {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  margin-top: 90px;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  color: white;
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Section Title */
+.section-title {
+  font-family: "Satisfy", cursive;
+  text-align: center;
+  color: #e74c3c;
+  margin: 5px 0 40px;
+  font-size: 2rem;
+}
+
+/* Menu & Gallery */
+.menu-items,
+.gallery-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+.gallery-items {
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
+  max-width: 1000px;
+  padding: 0 20px 60px;
+}
+
+.menu-card,
+.gallery-card {
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+  flex: 1 1 calc(25% - 30px);
+  min-width: 200px;
+  max-width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover & Click Effects */
+.menu-card:hover,
+.gallery-card:hover {
+  box-shadow: 0 6px 20px rgba(255, 111, 0, 0.594);
+  transform: translateY(-4px);
+}
+
+.menu-card:active,
+.gallery-card:active {
+  box-shadow: 0 3px 12px rgba(255, 111, 0, 0.594);
+  transform: translateY(0);
+}
+
+.gallery-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Gambar menu dan galeri */
+.menu-card img,
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card p,
+.gallery-card p {
+  font-family: "Satisfy", cursive;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.menu {
+  margin-bottom: 60px;
+}
+
+/* Order Section */
+.order {
+  padding: 60px 40px 80px;
+  background: #ffffff;
+}
+
+.order-content {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.order-left,
+.order-right {
+  min-height: 520px;
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.map-frame {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+}
+
+.info-box {
+  background: #fff;
+  border: 2px solid #ddd;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-title {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.about-us {
+  font-size: 0.9rem;
+}
+
+/* Sosial Media */
+.sosmed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  font-family: "Aeonik", sans-serif;
+}
+
+.sosmed-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.sosmed-icons a {
+  display: inline-block;
+}
+
+.sosmed-icons img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease, rotate 0.4s;
+}
+
+/* Hover effect */
+.sosmed-icons img:hover {
+  transform: scale(1.15) rotate(8deg);
+  background-color: #f77162;
+  box-shadow: 0 8px 16px rgba(248, 113, 29, 0.6);
+}
+
+/* Klik (active) effect */
+.sosmed-icons a:active img {
+  background-color: #e74c3c;
+  filter: brightness(0) invert(1);
+  transform: scale(0.95);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-image: url("image/baground2.png");
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.logo-footer {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.info-box strong {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.info-title {
+  color: #e74c3c;
+}
+
+/* link */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.card-link:hover {
+  transform: scale(1.03);
+}
+
+.card-link .gallery-card {
+  cursor: pointer;
+}
+
+.card-link:active .gallery-card {
+  background-color: #fceae9; /* warna soft pink */
+  box-shadow: 0 0 0 3px #e74c3c inset; /* garis merah di dalam */
+}
+
+.card-link:active .gallery-card p {
+  color: #e74c3c;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .menu-card,
+  .gallery-card {
+    flex: 1 1 calc(50% - 20px); /* 2 kolom di mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-card,
+  .gallery-card {
+    flex: 1 1 100%; /* 1 kolom di layar kecil */
+  }
+}

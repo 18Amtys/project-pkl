@@ -1,0 +1,257 @@
+/* File: buffet.css */
+
+body {
+  margin: 0;
+  font-family: 'Aeonik', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-right .navbar-logo {
+  height: 55px;
+  object-fit: contain;
+}
+
+.navbar-left .home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.home-icon {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.navbar-left .home-btn:hover {
+  background-color: #f79f95;
+  transform: scale(1.15) rotate(-10deg);
+  box-shadow: 0 0 14px rgba(243, 63, 43, 0.5);
+}
+
+.navbar-left .home-btn:hover .home-icon {
+  filter: brightness(1.2) contrast(1.1);
+  transform: scale(1.05);
+}
+
+.navbar-left .home-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(231, 76, 60, 0.3);
+}
+
+.menu-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-text {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+.left-text h2 {
+  font-size: 2rem;
+}
+
+.left-text .highlight {
+  font-family: 'Satisfy', cursive;
+  color: #e74c3c;
+}
+
+.left-text .box-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list li {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.menu-list li:hover a {
+  color: #e74c3c;
+}
+
+.menu-list li:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.right-gallery {
+  flex: 1 1 45%;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.gallery-img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+.image-collage {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  margin-top: 20px;
+}
+
+.collage-img {
+  position: absolute;
+  width: 240px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+/* Posisi & efek tumpukan */
+.img-1 {
+  top: 30px;
+  left: -50px;
+  rotate: -8deg;
+  z-index: 1;
+}
+.img-2 {
+  top: 0px;
+  left: 40px;
+  rotate: 0deg;
+  z-index: 2;
+}
+.img-3 {
+  top: 35px;
+  left: 120px;
+  rotate: 8deg;
+  z-index: 1;
+}
+
+/* Hover efek */
+.image-collage:hover .collage-img {
+  transform: scale(1.05);
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .image-collage {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+  }
+
+  .collage-img {
+    position: static;
+    width: 40%;
+    height: auto;
+    rotate: 0deg !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-gallery, .left-text {
+    flex: 1 1 100%;
+  }
+
+  .image-container {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+}
