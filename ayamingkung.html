@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu Hampers Gurame</title>
-  <link rel="stylesheet" href="kebulikambing.css" />
+  <title>Menu Hampers Ayam Ingkung</title>
+  <link rel="stylesheet" href="ayamingkung.css" />
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,11 +23,11 @@
   <!-- Gallery Filter -->
   <section class="gallery">
     <div class="gallery-header">
-      <h2 class="gallery-title"><span>Our Menu</span> – Box – Hampers - Nasi Kebuli Kambing</h2>
+      <h2 class="gallery-title"><span>Our Menu</span> – Box – Hampers – Hampers Ayam Ingkung</h2>
       <select class="gallery-filter" id="menuSelect">
         <option value="kebuliayam.html">Hampers Nasi Kebuli Ayam</option>
-        <option value="kebulikambing.html" selected>Hampers Nasi Kebuli Kambing</option>
-        <option value="ayamingkung.html">Hampers Ayam Ingkung</option>
+        <option value="kebulikambing.html">Hampers Nasi Kebuli Kambing</option>
+        <option value="ayamingkung.html" selected>Hampers Ayam Ingkung</option>
         <option value="nasipersonal.html">Hampers Nasi Personal</option>
         <option value="gurame.html">Hampers Gurame</option>
         <option value="dessert.html">Hampers Dessert</option>
@@ -38,43 +38,40 @@
   <main class="container">
     <section class="left-section">
       <div class="menu-box">
-        <img src="image/1.jpg" alt="Kebuli 2 Orang">
+        <img src="image/1.jpg" alt="Ayam ingkung bumbu teri kemasan dus mika">
         <div class="menu-detail">
-          <h3>Paket Nasi Kebuli Kambing 2 orang</h3>
-          <p>120.000 ,- perpax</p>
+          <h3>Ayam ingkung bumbu teri kemasan dus mika</h3>
+          <p>Rp195.000 ,- perpax</p>
           <ul>
-            <li>Nasi Kebuli</li>
-            <li>Kambing</li>
-            <li>Bombay</li>
-            <li>Sambel</li>
+            <li>Ayam utuh berbumbu terik khas Jawa</li>
+            <li>Dikemas cantik dalam dus mika</li>
+            <li>Cocok untuk hampers atau sajian spesial</li>
           </ul>
         </div>
       </div>
 
       <div class="menu-box">
-        <img src="image/1.jpg" alt="Kebuli 4 Orang">
+        <img src="image/1.jpg" alt="Ayam ingkung bakar kemasan dus mika">
         <div class="menu-detail">
-          <h3>Paket Nasi Kebuli Kambing 4 orang</h3>
-          <p>235.000 ,- perpax</p>
+          <h3>Ayam ingkung bakar kemasan dus mika</h3>
+          <p>Rp175.000 ,- perpax</p>
           <ul>
-            <li>Nasi Kebuli</li>
-            <li>Kambing</li>
-            <li>Bombay</li>
-            <li>Sambel</li>
+            <li>Ayam utuh berbumbu bakar khas</li>
+            <li>Gurih dan meresap</li>
+            <li>Dikemas cantik untuk hampers atau sajian spesial</li>
           </ul>
         </div>
       </div>
 
       <div class="menu-box">
-        <img src="image/1.jpg" alt="Kebuli 8 Orang">
+        <img src="image/1.jpg" alt="Ayam ingkung bakar kemasan sokase">
         <div class="menu-detail">
-          <h3>Paket Nasi Kebuli Kambing 8 orang</h3>
-          <p>470.000 ,- perpax</p>
+          <h3>Ayam ingkung bakar kemasan sokase</h3>
+          <p>Rp195.000 ,- perpax</p>
           <ul>
-            <li>Nasi Kebuli</li>
-            <li>Kambing</li>
-            <li>Bombay</li>
-            <li>Sambel</li>
+            <li>Ayam utuh dibakar dengan bumbu khas</li>
+            <li>Disajikan eksklusif dalam kemasan sokase bambu</li>
+            <li>Cocok untuk bingkisan tradisional nan elegan</li>
           </ul>
         </div>
       </div>
@@ -94,24 +91,17 @@
   </footer>
 
   <script>
-  document.getElementById('menuSelect').addEventListener('change', function () {
-    window.location.href = this.value;
-  });
-
-  window.addEventListener('DOMContentLoaded', () => {
-    const boxes = document.querySelectorAll('.menu-box');
-    boxes.forEach((box, i) => {
-      box.style.animationDelay = `${i * 0.2}s`;
-      box.style.opacity = '1';
+    document.getElementById('menuSelect').addEventListener('change', function () {
+      window.location.href = this.value;
     });
-  });
 
-  window.addEventListener('DOMContentLoaded', () => {
-  const animElems = document.querySelectorAll('.animate-in');
-  animElems.forEach((el, i) => {
-    el.style.animationDelay = `${i * 0.2}s`;
-  });
-});
-</script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const boxes = document.querySelectorAll('.menu-box');
+      boxes.forEach((box, i) => {
+        box.style.animationDelay = `${i * 0.2}s`;
+        box.style.opacity = '1';
+      });
+    });
+  </script>
 </body>
 </html>

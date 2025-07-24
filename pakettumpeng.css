@@ -123,6 +123,7 @@ body {
 .menu-item {
   background: white;
   display: flex;
+  align-items: center; /* <-- tambahkan ini */
   gap: 20px;
   padding: 15px;
   border-radius: 10px;
